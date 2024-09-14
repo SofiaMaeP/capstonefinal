@@ -1,0 +1,27 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5; /* Light background to contrast the container */
+}
+
+header {
+    background-color: #ce40b0;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+.container {
+    background-color: #f8f8f8; /* Off-white color */
+    max-width: 1200px;
+    margin: 50px auto; /* Center the container with a gap from the top */
+    padding: 40px; /* Padding inside the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+    border-radius: 10px; /* Slightly rounded corners */
+}
