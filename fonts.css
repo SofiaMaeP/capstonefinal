@@ -1,0 +1,34 @@
+/* Importing Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:wght@400;700&display=swap');
+
+/* Font styles for Oswald */
+.oswald-heading {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 700; /* Bold weight */
+}
+
+.oswald-subheading {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500; /* Medium weight */
+}
+
+.oswald-body {
+    font-family: 'Oswald', sans-serif;
+    font-weight: 400; /* Regular weight */
+}
+
+/* Font styles for Roboto */
+.roboto-heading {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700; /* Bold weight */
+}
+
+.roboto-subheading {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500; /* Medium weight */
+}
+
+.roboto-body {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400; /* Regular weight */
+}
