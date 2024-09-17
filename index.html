@@ -15,24 +15,116 @@
 <body>
     <header>
         <div class="logo-container">
-            <img src="img/capstoneLogo.png" alt="Capstone Long Logo" class="logo">
-            <div class="header-text">
-                Travelista
-            </div>
+            <img src="img/capstoneLogo.png" alt="Capstone Logo">
+            <img src="img/capstoneTravelista.png" alt="Travelista Logo">
         </div>
     </header>
 
-    <div class="container">
-        <img src="img/tripsched.png" alt="Trip Schedule" class="trip-schedule">
-    
-        <div class="text-content">
-            Want a private ride?
-        </div>
-    
-        <button class="book-now-button">
-            BOOK NOW!
-        </button>
-    </div>
-    
+        <div class="container">
+            <img src="img/tripsched.png" alt="Trip Schedule Image" class="trip-image">
+            
+            <h2 class="booking-text">Want to book a private ride?</h2>
+        
+            <a href="#" class="book-now-button">BOOK NOW!</a>
+
+            <div class="booking-form">
+                <form action="#" method="POST" enctype="multipart/form-data">
+                    <div class="grid-container">
+                        <!-- Row 1: Full Name and Passenger Count -->
+                        <div class="form-group">
+                            <label for="fullName">Full Name</label>
+                            <input type="text" id="fullName" name="fullName" placeholder="Your full name">
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="passengerCount">Passenger Count</label>
+                            <input type="number" id="passengerCount" name="passengerCount" placeholder="How many?">
+                        </div>
+            
+                        <!-- Row 2: With Infant/PWD/Senior Citizen and Contact Number -->
+                        <div class="form-group">
+                            <label>With Infant/PWD/Senior Citizen?</label>
+                            <div class="checkbox-group">
+                                <input type="checkbox" id="infant" name="special-needs" value="infant">
+                                <label for="infant">Infant/Child need of Seat</label>
+                                <input type="checkbox" id="pwd" name="special-needs" value="pwd">
+                                <label for="pwd">PWD</label>
+                                <input type="checkbox" id="senior" name="special-needs" value="senior">
+                                <label for="senior">Senior</label>
+                                <input type="checkbox" id="none" name="special-needs" value="none">
+                                <label for="none">None</label>
+                            </div>
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="contactNumber">Contact Number</label>
+                            <input type="tel" id="contactNumber" name="contactNumber" placeholder="Your contact number">
+                        </div>
+            
+                        <!-- Row 3: Pick Up Date/Time and Address -->
+                        <div class="form-group">
+                            <label for="pickupDateTime">Pick Up Date & Time</label>
+                            <input type="date" id="pickupDate" name="pickupDate">
+                            <input type="time" id="pickupTime" name="pickupTime">
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="pickupAddress">Pick Up Address</label>
+                            <input type="text" id="pickupAddress" name="pickupAddress" placeholder="Enter pickup address">
+                        </div>
+            
+                        <!-- Row 4: Drop Off Address and Select Driver/Van -->
+                        <div class="form-group">
+                            <label for="dropOffAddress">Drop Off Address</label>
+                            <input type="text" id="dropOffAddress" name="dropOffAddress" placeholder="Enter drop-off address">
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="driver">Select Driver/Van Type</label>
+                            <select id="driver" name="driver">
+                                <option value="driver1">Juan Dela Cruz - Toyota HiAce Super Grandia (11 seats)</option>
+                            </select>
+                        </div>
+            
+                        <!-- Row 5: Additional Notes -->
+                        <div class="form-group form-full-width">
+                            <label for="notes">Additional Notes</label>
+                            <textarea id="notes" name="notes" placeholder="Enter any additional information"></textarea>
+                        </div>
+            
+                        <!-- Row 6: Round Trip, Grand Total, Payment Mode, Proof of Payment -->
+                        <div class="form-group">
+                            <label for="roundTrip">Round Trip</label>
+                            <input type="checkbox" id="roundTrip" name="roundTrip">
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="grandTotal">Grand Total</label>
+                            <input type="text" id="grandTotal" name="grandTotal" value="PHP 0" readonly>
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="paymentMode">Mode of Payment</label>
+                            <select id="paymentMode" name="paymentMode">
+                                <option value="bpi">BPI Online</option>
+                            </select>
+                        </div>
+            
+                        <div class="form-group">
+                            <label for="proofOfPayment">Proof of Payment</label>
+                            <input type="file" id="proofOfPayment" name="proofOfPayment">
+                        </div>
+                    </div>
+            
+                    <p class="note">Note: Over-the-counter payments must be made within 48 hours of submitting this form.</p>
+            
+                    <button type="submit" class="submit-button">SUBMIT</button>
+                </form>
+            </div>
+            
+            
+
+        </div>        
+
 </body>
 </html>
