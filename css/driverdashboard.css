@@ -1,0 +1,79 @@
+/* driverdashboard.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    background: url('../img/jenevyver.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header {
+    background-color: #ce40b0;
+    background-image: url('../img/foggy-birds.png');
+    background-repeat: repeat;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo-container img {
+    width: 100px; /* Adjust size as needed */
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.content-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .logo-container img {
+        width: 100px; /* Adjusted size for mobile */
+    }
+
+    .content-box {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+}

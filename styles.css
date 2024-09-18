@@ -61,7 +61,7 @@ header {
     max-width: 1200px;
     margin: 50px auto; /* Center the container with a gap from the top */
     padding: 40px; /* Padding inside the container */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5); /* Soft shadow */
     border-radius: 10px; /* Rounded corners */
 }
 
@@ -87,7 +87,7 @@ header {
 .book-now-button {
     display: inline-block;
     background-color: #ce40b0; /* Same color as the header */
-    color: rgb(239, 230, 230);
+    color: rgb(255, 255, 255);
     font-family: 'Oswald', sans-serif;
     font-weight: 500;
     padding: 15px 30px;
@@ -100,86 +100,77 @@ header {
     width: fit-content;
 }
 
-/* Container for the form */
-.booking-form {
-    background-color: #f7f7f7; /* Off-white background */
+.form-wrapper {
+    margin-top: 30px; /* Adds space above the form */
+    border: 5px solid #ce40b0; /* Pink border */
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Shadow */
-    margin-top: 20px;
-}
-
-.grid-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr; /* Two columns */
-    gap: 20px; /* Space between form groups */
-}
-
-/* Full width elements like Additional Notes */
-.form-full-width {
-    grid-column: span 2; /* Spans both columns */
-}
-
-/* Styling form groups */
-.form-group {
+  }
+  
+  .form-container {
+    width: 100%;
+    background-color: #fff;
+  }
+  
+  .form-row {
     display: flex;
-    flex-direction: column;
-}
-
-.form-group label {
-    font-family: 'Roboto', sans-serif;
-    font-weight: 700;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .form-group {
+    flex: 1;
+  }
+  
+  .form-group.full-width {
+    flex: 100%;
+  }
+  
+  .form-group label {
+    display: block;
+    font-family: 'Roboto Condensed', sans-serif;
     margin-bottom: 5px;
-}
-
-.form-group input,
-.form-group select,
-.form-group textarea {
-    padding: 10px;
-    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 8px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 14px;
-}
-
-.checkbox-group {
+    border-radius: 4px;
+  }
+  
+  .checkbox-group {
     display: flex;
     gap: 10px;
-    align-items: center;
-}
-
-textarea {
-    resize: vertical;
-}
-
-.note {
+  }
+  
+  .form-note {
     font-size: 12px;
-    color: #777;
-    margin-top: 10px;
-    font-family: 'Roboto', sans-serif;
-}
-
-/* Styling the submit button */
-.submit-button {
-    background-color: #ce40b0; /* Same as the header */
-    color: white;
-    font-family: 'Oswald', sans-serif;
-    font-size: 18px;
-    padding: 15px 30px;
-    text-align: center;
-    border-radius: 25px; /* Rounded corners */
+    color: #666;
+    text-align: left;
+  }
+  
+  .submit-btn {
+    background-color: #ce40b0;
+    color: #fff;
+    padding: 10px 20px;
     border: none;
+    border-radius: 5px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
     cursor: pointer;
-    width: 100%;
-    margin-top: 20px;
-}
-
-.submit-button:hover {
-    background-color: #b1359a;
-}
-
-
-
-
-
+  }
+  
+  .submit-btn:hover {
+    background-color: #b23299;
+  }
+  
+  .submit-row {
+    display: flex;
+    justify-content: center; /* Centers the submit button */
+  }
+  
 

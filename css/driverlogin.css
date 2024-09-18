@@ -1,0 +1,95 @@
+/* driverlogin.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    background: #ce40b0 url('../img/foggy-birds.png') repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.form-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+}
+
+.logo {
+    width: 70%; /* Increased size */
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 28px; /* Slightly larger font size */
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    font-size: 18px; /* Larger font size */
+    margin-bottom: 8px;
+}
+
+input {
+    padding: 12px;
+    font-size: 18px; /* Larger font size */
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+    max-width: 300px;
+}
+
+button {
+    padding: 12px;
+    font-size: 18px; /* Larger font size */
+    color: #fff;
+    background-color: #ce40b0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+}
+
+button:hover {
+    background-color: #b7339c;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .form-box {
+        padding: 20px;
+    }
+
+    .logo {
+        width: 70%; /* Adjusted size for mobile */
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    input, button {
+        font-size: 16px;
+    }
+}

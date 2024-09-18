@@ -1,0 +1,81 @@
+/* admindashboard.css */
+
+/* General reset and body styling */
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-image: url('../img/jenevyver.jpg');
+    background-size: cover; /* Ensures the image covers the entire body */
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+/* Styling for the dashboard container */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+/* Header styling */
+header {
+    background-color: #ce40b0;
+    background-image: url('../img/foggy-birds.png');
+    background-repeat: repeat;
+    background-size: auto;
+    padding: 20px 30px; /* Increased padding */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Space out logos and links */
+    height: 80px; /* Increased header height */
+}
+
+/* Container for logos */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Logo styling */
+.logo-container img {
+    height: 60px; /* Increased height of logos */
+    margin-right: 10px; /* Space between the logos */
+}
+
+/* Links container */
+.links-container {
+    display: flex;
+    align-items: center;
+}
+
+.links-container a {
+    color: white;
+    text-decoration: none;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400; /* Thin font weight */
+    margin-left: 25px; /* Increased space between links */
+    font-size: 20px; /* Increased font size */
+}
+
+.links-container a:hover {
+    text-decoration: underline; /* Underline on hover for better UX */
+}
+
+/* Main content area styling */
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* White div with prominent box shadow */
+.content-box {
+    background-color: white;
+    padding: 20px;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.6); /* Prominent shadow */
+    border-radius: 8px; /* Rounded corners */
+    max-width: 800px; /* Adjust width as needed */
+    width: 100%;
+}

@@ -1,0 +1,73 @@
+/* adminlogin.css */
+
+body {
+    background-color: #ce40b0;
+    background-image: url('../img/foggy-birds.png');
+    background-repeat: repeat;
+    background-size: auto;
+    margin: 0;
+    font-family: 'Roboto Condensed', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 1000px; /* Adjust max-width as needed */
+    height: 80%; /* Adjust height as needed */
+    background-color: white;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    overflow: hidden; /* Ensures the image and content don’t overflow */
+}
+
+h2, label, input, button {
+    font-family: 'Roboto Condensed', sans-serif;
+}
+
+button {
+    background-color: #ce40b0;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #b6319e;
+}
+
+.logo {
+    max-width: 70%; /* Ensure the logo fits within the container */
+    height: auto; /* Maintain aspect ratio */
+    margin-bottom: 20px; /* Space between the logo and the heading */
+}
+
+.form-section {
+    flex: 1; /* Takes up half of the container */
+    padding: 20px;
+    padding-left: 40px; /* Larger padding on the left */
+    padding-right: 40px; /* Larger padding on the right */
+    box-sizing: border-box; /* Ensures padding is included in the width */
+    text-align: center;
+}
+
+.image-section {
+    flex: 1; /* Takes up half of the container */
+    display: flex;
+    justify-content: center; /* Center the image horizontally */
+    align-items: center; /* Center the image vertically */
+}
+
+.image-section img {
+    width: 100%; /* Ensure the image takes up 100% of the section’s width */
+    height: 100%; /* Ensure the image takes up 100% of the section’s height */
+    object-fit: cover; /* Cover the section without stretching */
+}
+
