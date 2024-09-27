@@ -1,0 +1,109 @@
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GFS Travelista</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<!-- First Row: Full Name, Passenger Count, With Infant/PWD/Senior, Contact Number -->
+<div class="form-wrapper">
+    <div class="form-container">
+      <!-- First Row: Full Name, Passenger Count, With Infant/PWD/Senior, Contact Number -->
+      <div class="form-row">
+        <div class="form-group">
+          <label for="full-name">Full Name</label>
+          <input type="text" id="full-name" name="full-name" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="passenger-count">Passenger Count</label>
+          <input type="number" id="passenger-count" name="passenger-count" class="form-control">
+        </div>
+        <div class="form-group">
+          <label>With Infant/PWD/Senior Citizen?</label>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="infant"> Infant</label>
+            <label><input type="checkbox" name="pwd"> PWD</label>
+            <label><input type="checkbox" name="senior"> Senior</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="contact-number">Contact Number</label>
+          <input type="text" id="contact-number" name="contact-number" class="form-control">
+        </div>
+      </div>
+  
+      <!-- Second Row: Pick Up Date & Time, Pick Up Address, Drop Off Address, Select Driver/Van -->
+      <div class="form-row">
+        <div class="form-group">
+          <label for="pickup-datetime">Pick Up Date & Time</label>
+          <input type="datetime-local" id="pickup-datetime" name="pickup-datetime" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="pickup-address">Pick Up Address</label>
+          <input type="text" id="pickup-address" name="pickup-address" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="dropoff-address">Drop Off Address</label>
+          <input type="text" id="dropoff-address" name="dropoff-address" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="driver-van">Select Driver/Van</label>
+          <select id="driver-van" name="driver-van" class="form-control">
+            <option value="driver1">Juan Dela Cruz - Toyota HiAce Super Grandia</option>
+          </select>
+        </div>
+      </div>
+  
+      <!-- Third Row: Additional Notes -->
+      <div class="form-row">
+        <div class="form-group full-width">
+          <label for="additional-notes">Additional Notes</label>
+          <textarea id="additional-notes" name="additional-notes" class="form-control"></textarea>
+        </div>
+      </div>
+  
+      <!-- Fourth Row: Round Trip, Grand Total, Mode of Payment, Proof of Payment -->
+      <div class="form-row">
+        <div class="form-group">
+          <label for="round-trip">Round Trip</label>
+          <input type="checkbox" id="round-trip" name="round-trip">
+        </div>
+        <div class="form-group">
+          <label for="grand-total">Grand Total</label>
+          <input type="text" id="grand-total" name="grand-total" class="form-control" value="PHP 0">
+        </div>
+        <div class="form-group">
+          <label for="payment-mode">Mode of Payment</label>
+          <select id="payment-mode" name="payment-mode" class="form-control">
+            <option value="bpi">BPI Online</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="proof-of-payment">Proof of Payment</label>
+          <input type="file" id="proof-of-payment" name="proof-of-payment" class="form-control">
+        </div>
+      </div>
+  
+      <!-- Fifth Row: Note -->
+      <div class="form-row">
+        <p class="form-note">
+          Note: Over the counter payments must be made within 48 hours of submitting this form. This is strictly implemented, and settling at a later time may risk your booking to be declared cancelled or moved to a later date.
+        </p>
+      </div>
+  
+      <!-- Sixth Row: Submit Button -->
+      <div class="form-row submit-row">
+        <button type="submit" class="submit-btn">SUBMIT</button>
+      </div>
+    </div>
+  </div>

@@ -100,6 +100,34 @@ header {
     width: fit-content;
 }
 
+/* Form Container */
+#formContainer {
+  margin-top: 20px;
+  display: none; /* Initially hidden */
+  opacity: 0;
+  transition: opacity 0.8s ease-out;
+}
+
+/* Text and Link Styling */
+.already-booking-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: #7d7d7d; /* Slightly grayed out */
+  text-align: center;
+  margin-top: 20px;
+}
+
+.booking-link {
+  color: #ce40b0; /* Dark pink */
+  text-decoration: none;
+  font-weight: bold; /* Emphasize the link */
+}
+
+.booking-link:hover {
+  color: #b0369d; /* Slightly darker pink on hover */
+  text-decoration: underline;
+}
+
 .form-wrapper {
     margin-top: 30px; /* Adds space above the form */
     border: 5px solid #ce40b0; /* Pink border */
@@ -173,4 +201,47 @@ header {
     justify-content: center; /* Centers the submit button */
   }
   
+  /* cstmrbookingdetails css */
+  /* Booking ID Section Styling */
+.booking-id-section {
+  display: flex;
+  flex-direction: column; /* Change layout to vertical */
+  align-items: center;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.booking-id-label {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px; /* Large text */
+  color: #333;
+  margin-bottom: 10px; /* Spacing between label and input */
+}
+
+.booking-id-input {
+  font-family: 'Roboto', sans-serif;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 250px; /* Adjust width as needed */
+  margin-bottom: 10px; /* Space between input and button */
+}
+
+.submit-booking-id {
+  background-color: #ce40b0; /* Button in same color as header */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit-booking-id:hover {
+  background-color: #b0369d; /* Slightly darker on hover */
+}
+
 
