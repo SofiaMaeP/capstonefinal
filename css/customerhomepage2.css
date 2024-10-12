@@ -15,8 +15,9 @@ nav {
     height: 80px;
     width: 100%;
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
-    position: relative;
-    z-index: 10;
+    position: sticky;  /* Make the header sticky */
+    top: 0;           /* Stick to the top */
+    z-index: 1000; 
 }
 
 label.logo {
@@ -162,7 +163,7 @@ a:hover {
 }
 .van-details {
     padding: 15px;
-    font-family: "Oswald", sans-serif; /* Apply Oswald font */
+    font-family: "Afacad Flux", sans-serif; 
 }
 .book-btn {
     padding: 10px;
