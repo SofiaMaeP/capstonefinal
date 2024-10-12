@@ -1,0 +1,248 @@
+/* Reset some default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    background-image: url('img/eibnersaliba.jpg');
+    background-size: cover; /* Ensures the background covers the entire body */
+    background-attachment: fixed; /* Keeps the background in place while scrolling */
+    background-position: center; /* Centers the image */
+    background-repeat: no-repeat; /* Prevents the background from repeating */
+  }
+  
+  
+  /* Header styles with texture and logos */
+  header {
+    background-color: #ce40b0;
+    background-image: url('img/foggy-birds.png');
+    background-repeat: repeat; /* Tiling the texture */
+    padding: 20px 0;
+    text-align: center;
+  }
+  
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px; /* Even smaller space between the logos */
+  }
+  
+  .logo-container img {
+    max-height: 80px; /* Adjust the height of the logos */
+    width: auto;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    /* Adjust the logo sizes for smaller screens */
+    .logo-container img {
+        max-height: 60px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    /* Stack logos vertically on very small screens */
+    .logo-container {
+        flex-direction: column;
+    }
+  
+    .logo-container img {
+        max-height: 50px;
+    }
+  }
+  
+  /* Container styles */
+  .container {
+    background-color: #f8f8f8; /* Off-white color */
+    max-width: 1200px;
+    margin: 50px auto; /* Center the container with a gap from the top */
+    padding: 40px; /* Padding inside the container */
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5); /* Soft shadow */
+    border-radius: 10px; /* Rounded corners */
+  }
+  
+  /* Image styling */
+  .trip-image {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto 20px auto; /* Adds space below the image */
+  }
+  
+  /* Text styling */
+  .booking-text {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 20px; /* Adds space below the text */
+    font-size: 24px;
+    color: #333;
+  }
+  
+  /* Button styling */
+  .book-now-button {
+    display: inline-block;
+    background-color: #ce40b0; /* Same color as the header */
+    color: rgb(255, 255, 255);
+    font-family: 'Oswald', sans-serif;
+    font-weight: 500;
+    padding: 15px 30px;
+    text-align: center;
+    border-radius: 10px; /* Rounded corners */
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 auto;
+    display: block;
+    width: fit-content;
+  }
+  
+  /* Form Container */
+  #formContainer {
+  margin-top: 20px;
+  display: none; /* Initially hidden */
+  opacity: 0;
+  transition: opacity 0.8s ease-out;
+  }
+  
+  /* Text and Link Styling */
+  .already-booking-text {
+  font-family: 'Roboto', sans-serif;
+  font-size: 14px;
+  color: #7d7d7d; /* Slightly grayed out */
+  text-align: center;
+  margin-top: 20px;
+  }
+  
+  .booking-link {
+  color: #ce40b0; /* Dark pink */
+  text-decoration: none;
+  font-weight: bold; /* Emphasize the link */
+  }
+  
+  .booking-link:hover {
+  color: #b0369d; /* Slightly darker pink on hover */
+  text-decoration: underline;
+  }
+  
+  .form-wrapper {
+    margin-top: 30px; /* Adds space above the form */
+    border: 5px solid #ce40b0; /* Pink border */
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .form-container {
+    width: 100%;
+    background-color: #fff;
+  }
+  
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .form-group {
+    flex: 1;
+  }
+  
+  .form-group.full-width {
+    flex: 100%;
+  }
+  
+  .form-group label {
+    display: block;
+    font-family: 'Roboto Condensed', sans-serif;
+    margin-bottom: 5px;
+    font-weight: 500;
+  }
+  
+  .form-control {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .checkbox-group {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .form-note {
+    font-size: 12px;
+    color: #666;
+    text-align: left;
+  }
+  
+  .submit-btn {
+    background-color: #ce40b0;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    cursor: pointer;
+  }
+  
+  .submit-btn:hover {
+    background-color: #b23299;
+  }
+  
+  .submit-row {
+    display: flex;
+    justify-content: center; /* Centers the submit button */
+  }
+  
+  /* cstmrbookingdetails css */
+  /* Booking ID Section Styling */
+  .booking-id-section {
+  display: flex;
+  flex-direction: column; /* Change layout to vertical */
+  align-items: center;
+  padding: 20px;
+  margin-top: 20px;
+  }
+  
+  .booking-id-label {
+  font-family: 'Oswald', sans-serif;
+  font-size: 20px; /* Large text */
+  color: #333;
+  margin-bottom: 10px; /* Spacing between label and input */
+  }
+  
+  .booking-id-input {
+  font-family: 'Roboto', sans-serif;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 250px; /* Adjust width as needed */
+  margin-bottom: 10px; /* Space between input and button */
+  }
+  
+  .submit-booking-id {
+  background-color: #ce40b0; /* Button in same color as header */
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  }
+  
+  .submit-booking-id:hover {
+  background-color: #b0369d; /* Slightly darker on hover */
+  }
+  
+  
+  

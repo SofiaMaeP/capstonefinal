@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Booking Form</title>
+
+    <!-- Link to your CSS -->
+    <link rel="stylesheet" href="css/bookvanform.css">
+
+    <!-- Google Fonts: Oswald and Roboto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header with van image, model, and driver name -->
+        <div class="form-header">
+            <img src="img/FOTON_TRANSVAN.jpg" alt="Van Image">
+            <h2>Van Model: Foton Transvan</h2>
+            <p>Driver Name: John Doe</p>
+            <p>Van Seater: 15 pax</p>
+        </div>
+
+        <!-- Form starts here -->
+        <form method="POST" action="path-to-your-action-url" enctype="multipart/form-data">
+            
+            <!-- Full Name and Passenger Count -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="full-name">Full Name</label>
+                    <input type="text" id="full-name" name="full_name" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="passenger-count">Passenger Count</label>
+                    <input type="number" id="passenger-count" name="passenger_count" class="form-control" min="1" required>
+                </div>
+            </div>
+
+            <!-- Checkboxes for Infant, PWD, Senior -->
+            <div class="form-group">
+                <label>With Infant/PWD/Senior Citizen?</label>
+                <div class="checkbox-group">
+                    <label><input type="checkbox" name="with_infant"> Infant</label>
+                    <label><input type="checkbox" name="with_pwd"> PWD</label>
+                    <label><input type="checkbox" name="with_senior"> Senior</label>
+                </div>
+            </div>
+
+            <!-- Contact Number, Pickup Date, Pickup and Dropoff Address -->
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="contact-number">Contact Number</label>
+                    <input type="text" id="contact-number" name="contact_number" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="pickup-datetime">Pick Up Date & Time</label>
+                    <input type="datetime-local" id="pickup-datetime" name="pickup_datetime" class="form-control" required>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="pickup-address">Pick Up Address</label>
+                    <input type="text" id="pickup-address" name="pickup_address" class="form-control" required>
+                </div>
+                <div class="form-group">
+                    <label for="dropoff-address">Drop Off Address</label>
+                    <input type="text" id="dropoff-address" name="dropoff_address" class="form-control" required>
+                </div>
+            </div>
+
+            <!-- Additional Notes and Round Trip -->
+            <div class="form-row">
+                <div class="form-group full-width">
+                    <label for="additional-notes">Additional Notes</label>
+                    <textarea id="additional-notes" name="additional_notes" class="form-control"></textarea>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="round-trip">Round Trip</label>
+                <input type="checkbox" id="round-trip" name="round_trip">
+            </div>
+
+            <!-- Submit button -->
+            <div class="submit-btn">
+                <button type="submit">Reserve Booking</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GFS Travelista</title>
+    <link rel="stylesheet" href="css/customerhomepage2.css">
+</head>
+<body>
+    <nav>
+        <!-- Checkbox for toggling menu -->
+        <input type="checkbox" id="check">
+        <!-- Menu icon -->
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <!-- Site logo -->
+        <label class="logo">GFS Travelista</label>
+        <!-- Navigation links -->
+        <ul>
+            <li><a class="active" href="#">Home</a></li>
+            <li><a href="#">Private Ride</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact Us</a></li>
+        </ul>
+    </nav>
+
+    <!-- Section for image -->
+    <section>
+        <img src="img/tripsched.png" alt="Trip Schedule Image" class="trip-image">
+    </section>
+
+    <h2 class="booking-text">Want to book a private ride?</h2>
+
+    <div class="carousel">
+        <div class="carousel-container">
+            <div class="carousel-slide">
+                <div class="van-card">
+                    <div class="van-img">
+                        <img src="img/MAXUS_V80.jpg" alt="Van Image">
+                    </div>
+                    <div class="van-details">
+                        <p><strong>Van Model:</strong> Maxus V80</p>
+                        <p><strong>Max Pax:</strong> 10</p>
+                        <p><strong>Driver:</strong> Random</p>
+                        <p><strong>Min Price:</strong> ₱5000</p>
+                    </div>
+                    <div class="book-btn">
+                            <button type="submit" class="book-button">Book</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="van-card">
+                    <div class="van-img">
+                        <img src="img/FOTON_TRANSVAN.jpg" alt="Van Image">
+                    </div>
+                    <div class="van-details">
+                        <p><strong>Van Model:</strong> Foton Transvan</p>
+                        <p><strong>Max Pax:</strong> 10</p>
+                        <p><strong>Driver:</strong> Juan</p>
+                        <p><strong>Min Price:</strong> ₱5000</p>
+                    </div>
+                    <div class="book-btn">
+                            <button type="submit" class="book-button">Book</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-slide">
+                <div class="van-card">
+                    <div class="van-img">
+                        <img src="img/TOYOTA_HIACE.jpg" alt="Van Image">
+                    </div>
+                    <div class="van-details">
+                        <p><strong>Van Model:</strong> Toyota Hiace</p>
+                        <p><strong>Max Pax:</strong> 10</p>
+                        <p><strong>Driver:</strong> Juan</p>
+                        <p><strong>Min Price:</strong> ₱5000</p>
+                    </div>
+                    <div class="book-btn">
+                            <button type="submit" class="book-button">Book</button>
+                        </form>
+                    </div>
+                </div>
+
+                <div class="van-card">
+                    <div class="van-img">
+                        <img src="img/NISSAN_URVAN.jpg" alt="Van Image">
+                    </div>
+                    <div class="van-details">
+                        <p><strong>Van Model:</strong> Nissan Urvan</p>
+                        <p><strong>Max Pax:</strong> 10</p>
+                        <p><strong>Driver:</strong> Juan</p>
+                        <p><strong>Min Price:</strong> ₱5000</p>
+                    </div>
+                    <div class="book-btn">
+                            <button type="submit" class="book-button">Book</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="carousel-controls">
+            <button class="prev" onclick="moveSlide(-1)">&#10094;</button>
+            <button class="next" onclick="moveSlide(1)">&#10095;</button>
+        </div>
+        <!-- Modal Structure -->
+<div id="bookingModal" class="modal">
+    <div class="modal-content">
+        <span class="close-button">&times;</span>
+        <div id="modal-form-content"></div>
+    </div>
+</div>
+
+</div>
+
+    </div>
+
+    <div class="see-more-container">
+        <a href="#" class="see-more">See More</a>
+    </div>
+
+    <div id="footer" style="padding-top: 50px;"></div>
+
+    <script>
+        //carousel Jscript
+        let currentSlide = 0;
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.carousel-slide');
+            if (index >= slides.length) {
+                currentSlide = 0;
+            } else if (index < 0) {
+                currentSlide = slides.length - 1;
+            } else {
+                currentSlide = index;
+            }
+
+            slides.forEach((slide, i) => {
+                slide.style.display = (i === currentSlide) ? 'flex' : 'none';
+            });
+        }
+
+        function moveSlide(direction) {
+            showSlide(currentSlide + direction);
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            showSlide(currentSlide); // Initialize the first slide
+        });
+
+// Get the modal (for bookvanform popup container)
+const modal = document.getElementById("bookingModal");
+    const modalContentDiv = document.getElementById("modal-form-content");
+    
+    // Get the <span> element that closes the modal
+    const closeButton = document.querySelector(".close-button");
+
+    // Function to open modal and load the bookvanform.html
+    function openModal() {
+        fetch('bookvanform.html') // Fetch the content
+            .then(response => response.text())
+            .then(data => {
+                modalContentDiv.innerHTML = data; // Insert the content into the modal
+                modal.style.display = "block"; // Show the modal
+            })
+            .catch(error => console.error('Error loading the form:', error));
+    }
+
+    // When the user clicks the button, open the modal
+    const bookButtons = document.querySelectorAll(".book-button"); // Ensure you add class 'book-button' to your buttons
+    bookButtons.forEach(button => {
+        button.addEventListener("click", openModal);
+    });
+
+    // When the user clicks on <span> (x), close the modal
+    closeButton.onclick = function() {
+        modal.style.display = "none";
+        modalContentDiv.innerHTML = ""; // Clear the modal content
+    }
+
+    // When the user clicks anywhere outside of the modal, close it
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+            modalContentDiv.innerHTML = ""; // Clear the modal content
+        }
+    }
+
+    //fetching footer
+    fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('footer').innerHTML = data;
+        });
+
+    </script>
+</body>
+</html>

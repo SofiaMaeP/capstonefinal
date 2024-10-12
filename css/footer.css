@@ -1,0 +1,25 @@
+footer {
+    background-color: #b51e88; /* Darker shade of #d229a2 */
+    padding: 10px; /* Reduced padding */
+    color: white;
+    font-family: 'Afacad Flux', sans-serif;
+    text-align: center;
+}
+
+.footer-content p {
+    margin: 0; /* Remove default margin */
+}
+
+.footer-content a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-content a:hover {
+    text-decoration: underline;
+}
+
+.separator {
+    margin: 0 10px; /* Spacing around the separator */
+    font-size: 18px; /* Size of the separator */
+}

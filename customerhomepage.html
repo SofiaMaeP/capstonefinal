@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GFS Travelista</title>
+    <link rel="stylesheet" href="css/customerhomepage.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="img/capstoneLogo.png" alt="Capstone Logo">
+            <img src="img/capstoneTravelista.png" alt="Travelista Logo">
+        </div>
+    </header>
+
+    <div class="container">
+        <img src="img/tripsched.png" alt="Trip Schedule Image" class="trip-image">
+        
+        <h2 class="booking-text">Want to book a private ride?</h2>
+    
+        <button id="bookNowButton" class="book-now-button">BOOK NOW!</button>
+
+        <div id="formContainer"></div>
+
+        <div class="already-booking-text">
+          Already have a booking with us? <a href="cstmrbookingdetails.html" class="booking-link">Click here!</a>
+        </div>
+    </div>        
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const bookNowButton = document.getElementById('bookNowButton');
+            const formContainer = document.getElementById('formContainer');
+        
+            bookNowButton.addEventListener('click', function() {
+                fetch('path-to-your-customerform-url')
+                    .then(response => response.text())
+                    .then(html => {
+                        // Inject the form HTML into the form container
+                        formContainer.innerHTML = html;
+        
+                        // Add a class to animate the form appearance
+                        formContainer.style.display = 'none'; // Initially hidden
+                        formContainer.style.opacity = 0;
+                        formContainer.style.transition = 'opacity 0.8s ease-out';
+        
+                        // Smooth scroll to the form container
+                        formContainer.style.display = 'block';
+                        window.scrollTo({
+                            top: formContainer.offsetTop,
+                            behavior: 'smooth'
+                        });
+        
+                        // Fade in the form with animation
+                        setTimeout(() => {
+                            formContainer.style.opacity = 1;
+                        }, 100);
+        
+                        // Call setupGrandTotal after the form is loaded
+                        setupGrandTotal();
+                    })
+                    .catch(error => console.error('Error loading the form:', error));
+            });
+        
+            function setupGrandTotal() {
+                const passengerCountInput = document.getElementById('passenger-count');
+                const grandTotalInput = document.getElementById('grand-total');
+        
+                // Ensure these IDs match the ones in your form
+                if (passengerCountInput && grandTotalInput) {
+                    function updateGrandTotal() {
+                        let passengerCount = parseInt(passengerCountInput.value) || 0;
+                        let grandTotal = passengerCount * 1000; // Adjust price per passenger
+        
+                        // Update the grand total input value
+                        grandTotalInput.value = grandTotal; // Store plain number for form submission
+                    }
+        
+                    // Bind the event listener for input changes
+                    passengerCountInput.addEventListener('input', updateGrandTotal);
+                    updateGrandTotal(); // Run once to set the initial value
+                }
+            }
+        });
+    </script>   
+</body>
+</html>
